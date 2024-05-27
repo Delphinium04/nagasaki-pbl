@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+
+
+<!--메인페이지-->
+<!--제작자: 202111112 박세현-->
+<!--최종 수정: 2024.05.24-->
+
+
+<html>
+
+<head>
+    <title>
+        컬러풀한 순간을 담아 마음 속에 깊이 새기다, 나가사키
+        <!--홈페이지 제목을 일단 인트로페이지 문구로 작성했습니다.-->
+    </title>
+
+
+    <!--CSS 영역-->
+    <style>
+        /*폰트 모음, 폰트는 스타일시트 맨 위에 임베딩하는 게 좋습니다*/
+        @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+        /*Alex Brush*/
+        @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+        /*Noto Sans KR*/
+        @font-face {
+            font-family: 'OTEnjoystoriesBA';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*tvn 즐거운이야기*/
+        @font-face {
+            font-family: 'Cafe24Simplehae';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*카페24 심플해*/
+        @font-face {
+            font-family: 'GabiaMaeumgyeol';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GabiaMaeumgyeol.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*가비아 마음결체*/
+        @font-face {
+            font-family: 'TTHakgyoansimYeohaengR';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimYeohaengR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*학교안심 여행, 210 카르페디엠이 유료 폰트로 웹폰트 코드가 없어서 일단 비슷해보이는 폰트로 대체했습니다.*/
+        /*210 마녀의 숲 경우도 유료 폰트로 웹폰트 코드가 없어서 일단 해당 폰트를 사용한 부분들은 사진으로 대체했습니다. 예)메인 카테고리 이미지*/
+        /*폰트 모음*/
+
+        /*전체 레이아웃 크기 조정*/
+        .all_layout {
+            width: 1903px;
+            height: 1040px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /*전체 레이아웃 크기 조정*/
+
+        /*헤더, 이 부분은 모든 페이지 동일하게 적용시키면 됩니다.*/
+        .header {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: transparent;
+            z-index: 500;
+        }
+
+        .picki_img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .picki {
+            display: block;
+            font-family: "Alex Brush", cursive;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 35pt;
+            color: white;
+            /*Picki 글씨 색은 페이지 별로 색상이 다 달라서 이 부분만 페이지 별로 색상 수정하면 됩니다.*/
+            position: absolute;
+            top: 35px;
+            left: 93px;
+        }
+
+        .home:link {
+            color: white;
+            /*Picki 클릭 시 하이퍼링크 색상을 위 .picki 색상과 동일한 색으로 고정시키는 함수입니다.*/
+            text-decoration: none;
+        }
+
+        .home:visited {
+            color: white;
+            /*Picki 클릭 시 하이퍼링크 색상을 위 .picki 색상과 동일한 색으로 고정시키는 함수입니다.*/
+            text-decoration: none;
+        }
+
+        .home:hover {
+            color: white;
+            /*Picki 클릭 시 하이퍼링크 색상을 위 .picki 색상과 동일한 색으로 고정시키는 함수입니다.*/
+            text-decoration: none;
+        }
+
+        /*헤더*/
+
+        /*헤더 카테고리, 이 부분도 헤더와 마찬가지로 모든 페이지 동일하게 적용되는 부분입니다.*/
+        .introduce {
+            display: inline;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+        }
+
+        .introduce_btn {
+            font-family: 'GabiaMaeumgyeol';
+            font-size: 32pt;
+            color: white;
+            /*헤더 카테고리 색상이 페이지 별로 다 다르기 때문에 확인하셔야 합니다.*/
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .introduce_sub {
+            background-color: white;
+            display: none;
+            padding: 20px;
+            font-family: 'TTHakgyoansimYeohaengR';
+            font-size: 24pt;
+            z-index: 400;
+        }
+
+        .introduce_blank {
+            font-size: 12pt;
+        }
+
+        .introduce_sub a {
+            display: block;
+            text-align: center;
+        }
+
+        .introduce_sub a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .introduce_sub a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .introduce_sub a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .introduce:hover .introduce_sub {
+            display: block;
+            position: relative;
+            top: 20px;
+        }
+
+        .city {
+            display: inline;
+            position: absolute;
+            top: 20px;
+            left: 65%;
+        }
+
+        .city_btn {
+            font-family: 'GabiaMaeumgyeol';
+            font-size: 32pt;
+            color: white;
+            /*헤더 카테고리 색상이 페이지 별로 다 다르기 때문에 확인하셔야 합니다.*/
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .city_sub {
+            background-color: white;
+            display: none;
+            padding: 20px;
+            font-family: 'TTHakgyoansimYeohaengR';
+            font-size: 24pt;
+            z-index: 400;
+        }
+
+        .city_blank {
+            font-size: 12pt;
+        }
+
+        .city_sub a {
+            display: block;
+            text-align: center;
+        }
+
+        .city_sub a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .city_sub a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .city_sub a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .city:hover .city_sub {
+            display: block;
+            position: relative;
+            top: 20px;
+            left: -80px;
+        }
+
+        .store {
+            display: inline;
+            position: absolute;
+            top: 20px;
+            left: 75%;
+        }
+
+        .store_btn {
+            font-family: 'GabiaMaeumgyeol';
+            font-size: 32pt;
+            color: white;
+            /*헤더 카테고리 색상이 페이지 별로 다 다르기 때문에 확인하셔야 합니다.*/
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .store_btn a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .store_btn a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        .store_btn a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        .about {
+            display: inline;
+            position: absolute;
+            top: 20px;
+            left: 85%;
+        }
+
+        .about_btn {
+            font-family: 'GabiaMaeumgyeol';
+            font-size: 32pt;
+            color: white;
+            /*헤더 카테고리 색상이 페이지 별로 다 다르기 때문에 확인하셔야 합니다.*/
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .about_btn a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .about_btn a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        .about_btn a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        /*헤더 카테고리*/
+
+        /*우측 메뉴, 이것도 위의 헤더와 헤더 카테고리랑 마찬가지로 모든 페이지 적용되는 부분*/
+        .top_right_menu_btn {
+            position: absolute;
+            top: 10px;
+            left: 95%;
+        }
+
+        .top_right_menu_bg {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            display: none;
+        }
+
+        .top_right_menu_menu {
+            display: none;
+            width: 540px;
+            height: 1040px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: white;
+            position: absolute;
+            top: 0;
+            right: -50%;
+        }
+
+        .top_right_menu_close {
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 0;
+        }
+
+        .top_right_menu_menu_wrap {
+            list-style-type: none;
+            position: absolute;
+            top: 250px;
+            left: 0;
+            font-size: 40pt;
+        }
+
+        .top_right_menu_menu_border {
+            border: 3px;
+            border-color: black;
+            border-style: solid;
+        }
+
+        .top_right_menu_eat_menu {
+            display: none;
+            font-family: 'Cafe24Simplehae';
+            font-size: 24pt;
+            padding: 25px;
+            position: relative;
+            left: 5%;
+        }
+
+        .top_right_menu_tourism_menu {
+            display: none;
+            font-family: 'Cafe24Simplehae';
+            font-size: 24pt;
+            padding: 25px;
+            position: relative;
+            left: 5%;
+        }
+
+        .top_right_menu_festival_menu {
+            display: none;
+            font-family: 'Cafe24Simplehae';
+            font-size: 24pt;
+            padding: 25px;
+            position: relative;
+            left: 5%;
+        }
+
+        .top_right_menu_activity_menu {
+            display: none;
+            font-family: 'Cafe24Simplehae';
+            font-size: 24pt;
+            padding: 25px;
+            position: relative;
+            left: 5%;
+        }
+
+        .top_right_menu_menu_link:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .top_right_menu_menu_link:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .top_right_menu_menu_link:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        /*우측 메뉴*/
+        /*여기까지가 헤더입니다.*/
+
+        /*여기서부터는 메인페이지만 적용되는 스타일시트입니다.*/
+        /*슬라이드*/
+        .mainpage_slide {
+            width: 1903px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .mainpage_slide_img_list {
+            width: 9515px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            list-style-type: none;
+        }
+
+        .mainpage_slide_img_list li {
+            float: left;
+        }
+
+        .mainpage_slide_img_list img {
+            width: 1903px;
+            height: 500px;
+        }
+
+        /*슬라이드*/
+
+        /*슬라이드 문구*/
+        .mainpage_slide_phrase_1 {
+            position: relative;
+            text-align: center;
+            top: 140px;
+            z-index: 300;
+            font-family: 'OTEnjoystoriesBA';
+            font-size: 56pt;
+            color: white;
+        }
+
+        .mainpage_slide_phrase_2_area {
+            position: absolute;
+            top: 280px;
+            left: 556.5px;
+            z-index: 200;
+            width: 750px;
+            height: 95px;
+            padding: 25px;
+            border: none;
+            background-color: red;
+        }
+
+        .mainpage_slide_phrase_2 {
+            text-align: center;
+            font-family: 'cafe24simplehae';
+            font-size: 24pt;
+            color: white;
+        }
+
+        /*슬라이드 문구*/
+
+        /*메인 카테고리*/
+        .main_category_phrase {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 40pt;
+            position: absolute;
+            top: 525px;
+            left: 50px;
+        }
+
+        .eat {
+            position: absolute;
+            top: 640px;
+            left: 3%;
+        }
+
+        .eat_color {
+            position: absolute;
+            top: 680px;
+            left: 20%;
+            list-style-type: none;
+        }
+
+        .tourism {
+            position: absolute;
+            top: 640px;
+            left: 27.2%;
+        }
+
+        .tourism_color {
+            position: absolute;
+            top: 620px;
+            left: 44.2%;
+            list-style-type: none;
+        }
+
+        .festival {
+            position: absolute;
+            top: 640px;
+            left: 51.4%;
+        }
+
+        .festival_color {
+            position: absolute;
+            top: 680px;
+            left: 68.4%;
+            list-style-type: none;
+        }
+
+        .activity {
+            position: absolute;
+            top: 640px;
+            left: 75.6%;
+        }
+
+        .activity_color {
+            position: absolute;
+            top: 660px;
+            left: 92.6%;
+            list-style-type: none;
+        }
+
+        /*메인 카테고리*/
+
+        /*메인페이지 전체 마진, 패딩*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /*메인페이지 전체 마진, 패딩*/
+    </style>
+    <!--CSS 영역-->
+
+
+    <!--Jquery 영역-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <script>
+
+        /*슬라이드*/
+        $(document).ready(function () {
+            $('.mainpage_slide_img_list li').last().prependTo('.mainpage_slide_img_list');
+            $('.mainpage_slide_img_list').css('left', -1903);
+            setInterval(function () {
+                $('.mainpage_slide_img_list').animate({ left: '-=' + 1903 }, 'slow', function () {
+                    $('.mainpage_slide_img_list li').first().appendTo('.mainpage_slide_img_list');
+                    $('.mainpage_slide_img_list').css('left', -1903);
+                });
+            }, 5000);
+        });
+        /*슬라이드*/
+
+        /*슬라이드 문구2 배경색*/
+        $(document).ready(function () {
+            var num = 0;
+            setInterval(function () {
+                if (num === 0) {
+                    $('.mainpage_slide_phrase_2_area').css({ backgroundColor: "yellow" })
+                    $('.mainpage_slide_phrase_2').css("color", "black")
+                    num++;
+                } else if (num === 1) {
+                    $('.mainpage_slide_phrase_2_area').css({ backgroundColor: "green" })
+                    $('.mainpage_slide_phrase_2').css("color", "white")
+                    num++;
+                } else if (num === 2) {
+                    $('.mainpage_slide_phrase_2_area').css({ backgroundColor: "blue" })
+                    num++;
+                } else if (num === 3) {
+                    $('.mainpage_slide_phrase_2_area').css({ backgroundColor: "purple" })
+                    num++;
+                } else if (num === 4) {
+                    $('.mainpage_slide_phrase_2_area').css({ backgroundColor: "red" })
+                    num = 0;
+                }
+            }, 5000);
+        });
+        /*슬라이드 문구2 배경색*/
+
+        /*우측 메뉴에 관한 함수들입니다.*/
+        /*우측 메뉴, 우측 메뉴 작동 함수입니다. 그대로 복사해서 넣으면 됩니다.*/
+        $(document).ready(function () {
+            $('.top_right_menu_btn>a').on('click', function () {
+                $('.top_right_menu_bg').show();
+                $('.top_right_menu_menu').show().animate({
+                    right: 0
+                });
+            });
+            $('.top_right_menu_close').on('click', function () {
+                $('.top_right_menu_bg').hide();
+                $('.top_right_menu_menu').animate({
+                    right: '-' + 50 + '%'
+                }, function () {
+                    $('.top_right_menu_menu').hide();
+                });
+            });
+        });
+        /*우측 메뉴*/
+
+        /*우측 메뉴 카테고리 클릭, 이것도 마찬가지로 그대로 복사해서 넣으면 됩니다.*/
+        $(document).ready(function () {
+            $('.top_right_menu_eat').click(function () {
+                $('.top_right_menu_eat_menu').toggle();
+            });
+        });
+        $(document).ready(function () {
+            $('.top_right_menu_tourism').click(function () {
+                $('.top_right_menu_tourism_menu').toggle();
+            });
+        });
+        $(document).ready(function () {
+            $('.top_right_menu_festival').click(function () {
+                $('.top_right_menu_festival_menu').toggle();
+            });
+        });
+        $(document).ready(function () {
+            $('.top_right_menu_activity').click(function () {
+                $('.top_right_menu_activity_menu').toggle();
+            });
+        });
+        /*우측 메뉴 카테고리 클릭*/
+        /*우측 메뉴에 관한 함수들입니다.*/
+
+    </script>
+    <!--Jquery 영역-->
+
+</head>
+
+
+<body style="background-image: url('image/mainpage background.jpg'); background-repeat: repeat;">
+    <!--배경화면은 body 요소에 인라인 스타일 시트로 직접 적용하였고 그대로 복사해서 사용하시면 됩니다.-->
+
+
+    <!--전체 레이아웃-->
+    <div class="all_layout">
+
+        <!--헤더-->
+        <div class="header">
+            <a class="home" href="mainpage.html"><img class="picki_img" src="image/home.png" alt=""></a>
+            <!--picki 이미지의 경우 페이지 별로 색상이 다 다르므로 소스 부를 때 구분하셔야 합니다.-->
+            <p class="picki">
+                <a class="home" href="mainpage.html">
+                    Picki
+                </a>
+            </p>
+
+            <!--헤더 카테고리-->
+            <div class="header_category">
+                <div class="introduce">
+                    <button class="introduce_btn">
+                        Introduce
+                    </button>
+                    <div class="introduce_sub">
+                        <a href="subpage_introduce_introduce.html"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            소개글
+                        </a>
+                        <p class="introduce_blank">
+                            &nbsp;
+                        </p>
+                        <hr>
+                        <p class="introduce_blank">
+                            &nbsp;
+                        </p>
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            교통정보
+                        </a>
+                    </div>
+                </div>
+                <div class="city">
+                    <button class="city_btn">
+                        City
+                    </button>
+                    <div class="city_sub">
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            북부지역
+                        </a>
+                        <p class="city_blank">
+                            &nbsp;
+                        </p>
+                        <hr>
+                        <p class="city_blank">
+                            &nbsp;
+                        </p>
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            중부지역
+                        </a>
+                        <p class="city_blank">
+                            &nbsp;
+                        </p>
+                        <hr>
+                        <p class="city_blank">
+                            &nbsp;
+                        </p>
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            나가사키시
+                        </a>
+                        <p class="city_blank">
+                            &nbsp;
+                        </p>
+                        <hr>
+                        <p class="city_blank">
+                            &nbsp;
+                        </p>
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            시마바라 반도
+                        </a>
+                    </div>
+                </div>
+                <div class="store">
+                    <button class="store_btn">
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            Store
+                        </a>
+                    </button>
+                </div>
+                <div class="about">
+                    <button class="about_btn">
+                        <a href="#none"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                            About
+                        </a>
+                    </button>
+                </div>
+            </div>
+            <!--헤더 카테고리-->
+
+            <!--우측 메뉴-->
+            <div class="top_right_menu">
+                <div class="top_right_menu_btn">
+                    <a href="#"> <!--메뉴판 클릭을 위한 임의 링크입니다. 건들지 마세요.-->
+                        <img src="image/top right menu.png">
+                    </a>
+                </div>
+            </div>
+            <div class="top_right_menu_bg">
+            </div>
+            <div class="top_right_menu_menu">
+                <a class="top_right_menu_close" href="#"> <!--메뉴판 클릭을 위한 임의 링크입니다. 건들지 마세요.-->
+                    <img src="image/top right menu close.png">
+                </a>
+                <ul class="top_right_menu_menu_wrap">
+                    <li>
+                        <img src="image/top right menu category.png">
+                    </li>
+                    <li class="top_right_menu_menu_border">
+                        <a class="top_right_menu_eat" href="#"> <!--메뉴판 클릭을 위한 임의 링크입니다. 건들지 마세요.-->
+                            <img src="image/top right menu eat.png" width="100%">
+                        </a>
+                        <ul class="top_right_menu_eat_menu">
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Yellow
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Brown
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    White
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="top_right_menu_menu_border">
+                        <a class="top_right_menu_tourism" href="#"> <!--메뉴판 클릭을 위한 임의 링크입니다. 건들지 마세요.-->
+                            <img src="image/top right menu tourism.png" width="100%">
+                        </a>
+                        <ul class="top_right_menu_tourism_menu">
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Red
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Green
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Blue
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Purple
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Brown
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    White
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="top_right_menu_menu_border">
+                        <a class="top_right_menu_festival" href="#"> <!--메뉴판 클릭을 위한 임의 링크입니다. 건들지 마세요.-->
+                            <img src="image/top right menu festival.png" width="100%">
+                        </a>
+                        <ul class="top_right_menu_festival_menu">
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Red
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    White
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Rainbow
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="top_right_menu_menu_border">
+                        <a class="top_right_menu_activity" href="#"> <!--메뉴판 클릭을 위한 임의 링크입니다. 건들지 마세요.-->
+                            <img src="image/top right menu activity.png" width="100%">
+                        </a>
+                        <ul class="top_right_menu_activity_menu">
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Red
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Orange
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Green
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    Blue
+                                </a>
+                            </li>
+                            <p>
+                                &nbsp;
+                            </p>
+                            <li>
+                                <a class="top_right_menu_menu_link" href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                                    White
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--우측 메뉴-->
+
+        </div>
+        <!--헤더-->
+
+        <!--슬라이드-->
+        <div class="mainpage_slide">
+            <ul class="mainpage_slide_img_list">
+                <li>
+                    <img src="image/mainpage slide 1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="image/mainpage slide 2.jpg" alt="">
+                </li>
+                <li>
+                    <img src="image/mainpage slide 3.jpg" alt="">
+                </li>
+                <li>
+                    <img src="image/mainpage slide 4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="image/mainpage slide 5.jpg" alt="">
+                </li>
+            </ul>
+
+            <!--슬라이드 문구-->
+            <p class="mainpage_slide_phrase_1">
+                "I could be every color you like"
+            </p>
+            <div class="mainpage_slide_phrase_2_area">
+                <p class="mainpage_slide_phrase_2">
+                    어떤 색이든 될 수 있는
+                    <br>
+                    &nbsp;
+                    <br>특별한 지역, 나가사키로 여러분을 초대합니다.
+                </p>
+            </div>
+            <!--슬라이드 문구-->
+
+        </div>
+        <!--슬라이드-->
+
+        <!--메인 카테고리-->
+        <div class="main_category">
+            <p class="main_category_phrase">
+                원픽 컬러 클릭!
+            </p>
+            <img class="eat" src="image/eat.jpg" alt="">
+            <ul class="eat_color">
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/eat yellow.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="image/eat brown.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="image/eat white.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <img class="tourism" src="image/tourism.jpg" alt="">
+            <ul class="tourism_color">
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/tourism red.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/tourism green.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/tourism blue.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/tourism purple.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/tourism brown.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/tourism white.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <img class="festival" src="image/festival.jpg" alt="">
+            <ul class="festival_color">
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/festival red.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/festival white.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/festival rainbow.png" alt="">
+                    </a>
+                </li>
+            </ul>
+            <img class="activity" src="image/activity.jpg" alt="">
+            <ul class="activity_color">
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/activity red.png." alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/activity orange.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/activity green.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/activity blue.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#"> <!--이 부분에 해당되는 페이지 링크 걸면 됩니다.-->
+                        <img src="image/activity white.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--메인 카테고리-->
+
+    </div>
+    <!--전체 레이아웃-->
+
+</body>
+
+</html>

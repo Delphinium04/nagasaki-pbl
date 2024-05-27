@@ -38,7 +38,20 @@
 }
 
 .article-item--image > img {
+  position: relative;
   object-fit: contain;
+}
+
+.article-item--image > span {
+  position: relative;
+  left: 50px;
+  bottom: 60px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 1;
 }
 
 .article-item--toolbar {

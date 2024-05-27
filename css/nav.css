@@ -1,0 +1,114 @@
+/*폰트 모음, 폰트는 스타일시트 맨 위에 임베딩하는 게 좋습니다*/
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
+/*Alex Brush*/
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/*Noto Sans KR*/
+@font-face {
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*tvn 즐거운이야기*/
+@font-face {
+  font-family: "Cafe24Simplehae";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*카페24 심플해*/
+@font-face {
+  font-family: "GabiaMaeumgyeol";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GabiaMaeumgyeol.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*가비아 마음결체*/
+@font-face {
+  font-family: "TTHakgyoansimYeohaengR";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimYeohaengR.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin-right: 20px;
+}
+
+.picki-img {
+  width: 100px;
+  height: 100px;
+}
+
+.picki-text {
+  display: inline-block;
+  font-family: "Alex Brush", cursive;
+  font-weight: 400;
+  font-size: 35pt;
+  padding-top: 20px;
+}
+
+/*헤더*/
+.category-item {
+  width: 200px;
+  height: 100%;
+  font-family: "GabiaMaeumgyeol";
+  font-size: 32pt;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  line-height: 100px;
+}
+
+#introduce-area {
+  margin-right: 40px;
+}
+
+.category-sub {
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px 20px;
+  font-family: "TTHakgyoansimYeohaengR";
+  font-size: 20pt;
+  line-height: 28px;
+  z-index: 1;
+}
+
+.category-sub > hr {
+  margin: 15px 20px;
+}
+
+.category-item:hover .category-sub {
+  display: block;
+  position: relative;
+}
+
+#menu-open-btn {
+  background: url(../img/menu.png) no-repeat center center;
+  border: none;
+  width: 100px;
+  height: 100px;
+}
