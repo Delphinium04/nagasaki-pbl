@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/min-reset.css">
+    <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--nav-->
+        <div id="nav"></div>
+        <div id="color-line" class="bg-black">&nbsp;</div>
+        <!--color background-->
+        <div id="content-menu" class="bg-black">
+            <div id="content-menu--box">
+                <div id="content-menu--group" class="bg-gray">
+                    <p class="color-white">Introduce</p>
+                    <div class="bg-white color-disabled">소개글</div>
+                    <div class="bg-white color-black font-bold">교통 정보</div>
+                </div>
+            </div>
+            <!--article-->
+            <div id="content-area" class="bg-white">
+                <p id="title" class="font-h1">교통 정보</h1>
+                <div id="article-area">
+                    <div id="article">
+                        <div id="subtitle-div">
+                            <div>
+                                <span class="font-h2">나가사키 시내의 이동 수단</span>
+                            </div>
+                            <div>
+                                <hr>
+                                <span class="font-h3">노면전차</span>
+                            </div>
+                        </div>
+                        <p class="font-article">
+                            나가사키 시내를 이동할 땐 전차가 편하답니다. 나가사키에는 JR 외에도 나가사키 전기 궤도가 다섯 선의 노면 전차를 운행하고 있어 관광 명소를 돌 때 매우
+                            편리하답니다. 노면 전차의 운임은 일률 100엔이지만,
+                            500엔이면 일일 승차권도 살 수 있어요. 또, 시내를 달리는 나가사키 버스에도 나가사키 시내 관광 1일 승차권」이 
+                            있으며, 이것도 500엔이랍니다.
+
+                        </p>
+                    </div>
+                    <div id="article-imgs">
+                        <img src="img/transport.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // https://kyung-a.tistory.com/18
+        $(document).ready(function () {
+            $("#nav").load("nav.html");
+        })
+    </script>
+</body>
+
+</html>
