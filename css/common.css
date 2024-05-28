@@ -97,11 +97,17 @@ a:hover {
 .color-red {
   color: red;
 }
+.color-orange {
+  color: #fd9f28;
+}
 .color-deepred {
   color: #ff5100;
 }
 .color-white {
   color: white;
+}
+.color-green {
+  color: #7db249;
 }
 .color-disabled {
   color: #a7a7a7;
@@ -112,17 +118,70 @@ a:hover {
 .color-black {
   color: black;
 }
+.color-brown {
+  color: #914116;
+}
+.color-purple {
+  color: #b96bc6;
+}
+.color-blue {
+  color: #18a8f1;
+}
+
+.bg-deepwhite {
+  background-color: #eeeeee;
+}
 
 .bg-red {
-  background-color: red;
+  background-color: #fc5230;
+  background: #fc5230;
+  border-color: #fc5230;
+}
+
+.bg-deepred {
+  background-color: #c00000;
+  background: #c00000;
+  border-color: #c00000;
+}
+
+.bg-orange {
+  background-color: #fd9f28;
+  background: #fd9f28;
+  border-color: #fd9f28;
+}
+
+.bg-deeporange {
+  background-color: #fd6f22;
+  background: #fd6f22;
+  border-color: #fd6f22;
 }
 
 .bg-white {
   background-color: white;
 }
-
+.bg-green {
+  background-color: #7db249;
+  background: #7db249;
+  border-color: #7db249;
+}
+.bg-deepgreen {
+  background-color: #456e2a;
+  background: #456e2a;
+  border-color: #456e2a;
+}
 .bg-black {
   background-color: black;
+}
+.bg-purple {
+  background-color: #b96bc6;
+  background: #b96bc6;
+  border-color: #b96bc6;
+}
+
+.bg-deeppurple {
+  background-color: #541d7a;
+  background: #541d7a;
+  border-color: #541d7a;
 }
 
 .bg-yellow {
@@ -134,6 +193,29 @@ a:hover {
   background-color: #fd9f28;
   border-color: #fd9f28;
   background: #fd9f28;
+}
+
+.bg-brown {
+  background-color: #ca591b;
+  border-color: #ca591b;
+  background: #ca591b;
+}
+
+.bg-deepbrown {
+  background-color: #914116;
+  border-color: #914116;
+  background: #914116;
+}
+.bg-blue {
+  background-color: #18a8f1;
+  border-color: #18a8f1;
+  background: #18a8f1;
+}
+
+.bg-deepblue {
+  background-color: #0e6ca5;
+  border-color: #0e6ca5;
+  background: #0e6ca5;
 }
 
 .bg-gray {
@@ -160,16 +242,21 @@ a:hover {
   font-weight: bold;
 }
 
+.font-outline {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+}
+
 .font-h1 {
   font-family: witchL;
-  font-size: 60px;
+  font-size: 80px;
   text-align: center;
   font-weight: bold;
 }
 
 .font-h2 {
   font-family: Cafe24Dangdanghae;
-  font-size: 42px;
+  font-size: 38px;
   font-weight: bold;
 }
 
@@ -179,7 +266,7 @@ a:hover {
 }
 .font-article {
   font-family: Cafe24Simplehae;
-  font-size: 25px;
+  font-size: 28px;
   line-height: 1.5em;
 }
 
@@ -260,13 +347,16 @@ body {
 }
 
 #content-menu--box {
-  width: 200px;
+  align-items: center;
+  display: flex;
+  width: 300px;
   height: 100%;
   flex-grow: 0;
 }
 
 #content-menu--group {
-  margin-top: 30vh;
+  margin-bottom: 200px;
+  width: 100%;
   padding: 10px 0px;
   text-align: center;
   font-size: 20px;
@@ -275,9 +365,9 @@ body {
 #content-menu--group * {
   font-family: GabiaMaeumgyeol;
   margin: 2px 4px;
-  height: 40px;
+  height: 60px;
   align-items: center;
-  line-height: 40px;
+  line-height: 60px;
 }
 
 #content-menu--group > p {
@@ -341,3 +431,72 @@ body {
   padding: 20px 10px;
 }
 /*#endregion */
+
+#article-area {
+  display: inline-block;
+}
+
+#content-area {
+  overflow: scroll;
+  overflow-y: scroll;
+  height: calc(100% - 100px);
+}
+
+.article-item {
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  margin: 20px 0px;
+}
+
+.article-item > * {
+  padding: 0px 20px;
+}
+
+.article-item hr {
+  width: 225px;
+  height: 2px;
+  margin-bottom: 25px;
+}
+
+.article-item--image {
+  max-width: 400px;
+}
+
+.article-item--image > img {
+  position: relative;
+  object-fit: contain;
+}
+
+.article-item--image > span {
+  font-family: KCC-eunyoung;
+  position: relative;
+  left: 50px;
+  bottom: 60px;
+  height: 30px;
+  font-size: 20px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 1;
+}
+
+.article-item--toolbar {
+  margin: 15px 0px;
+  height: 30px;
+}
+
+.article-item--toolbar > img {
+  height: 100%;
+  object-fit: contain;
+}
+
+.article-RtoL {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.article-RtoL hr {
+  margin-left: auto;
+}
+/* https://stackoverflow.com/a/62745061 */

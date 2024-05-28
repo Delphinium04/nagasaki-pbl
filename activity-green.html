@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나가사키 - 체험</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
+    <script src="js/right-menu.js"></script>
+    <link rel="stylesheet" href="css/min-reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--nav-->
+        <div id="nav"></div>
+        <style>
+            .picki-img {
+                content: url("img/green/picki-green.png");
+                background-size: contain;
+            }
+        </style>
+        <div id="color-line" class="bg-green">&nbsp;</div>
+        <!--color background-->
+        <div id="content-menu" class="bg-green">
+            <div id="content-menu--box">
+                <div id="content-menu--group" class="bg-deepgreen">
+                    <p class="color-white">Activity</p>
+                    <div class="bg-white color-disabled"><a href="activity-red.html">red</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-orange.html">Orange</a></div>
+                    <div class="bg-white color-green font-bold"><a href="activity-green.html">Green</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-blue.html">Blue</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-white.html">White</a></div>
+                </div>
+            </div>
+            <!--article-->
+            <div id="content-area" class="bg-white">
+                <p id="title" class="font-h1 color-green">Green</h1>
+                <div id="article-area">
+                    <div class="article-item">
+                        <div class="article-item--image">
+                            <img src="img/green/matsuura.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>마츠우라 역사 박물관
+                                </p>
+                                <hr class="bg-deepgreen">
+                            </div>
+                            <p class="font-article">마츠우라 역사 박물관에는 최초 항구에 걸맞게 옛 대외 무역 관계와 기독교, 여러 서류와 당주의 역사 자료 등 여러 자료를
+                                관람할 수 
+                                있어요. 특히 안에 있는 간운테이에서 다도 체험을 할 수도 있답니다! 일본 풍의 분위기와 간운테이의 한적함 안에서 말차와 다과를 
+                                즐겨보는 것은 어떨까요?
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/green/heart-green.png" alt="하트">
+                                <img src="img/green/comment-green.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-green font-bold">사진 Tip!</p>
+                            <p class="font-tip-article">
+                                박물관 구경을 다 하고 마지막 끝날때쯔음 투구 및 갑옷과 기모노를 직접 입고 사진찍을 수 있는 포토존이 마련되어 있으니 박물관 구경 후에 꼭 일본의 갑옷과
+                                기모노를 입고 사진을 찍어보세요! 
+                                정말 멋진 사진이 탄생할 거에요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article-item article-RtoL">
+                        <div class="article-item--image">
+                            <img src="img/green/zoo.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>나가사키 바이오파크</p>
+                                <hr class="bg-deepgreen">
+                            </div>
+                            <p class="font-article">
+                                방문객이 원숭이, 카피바라와 같은 동물을 만지고 먹이를 줄 수 있는 체험형 자연 생태 공원입니다. 30만 대지 안에는 라마, 하마, 카피바라를 비롯하여
+                                왈라비, 다람쥐원숭이 등이 생활하고 있으며, 일부 
+                                동물들과 직접 교감할 수 있으며 먹이를 줄 수도 있으니 
+                                동물을 좋아하면 꼭 가보는 것을 추천드려요!
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/green/heart-green.png" alt="하트">
+                                <img src="img/green/comment-green.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-green font-bold">알아두면 좋아요</p>
+                            <p class="font-tip-article">
+                                나가사키 바이오파크는 일반적인 동물원과 다르게 울타리가 없는 동물원이기 때문에 
+                                사람들만 즐거워하는 곳이 아니라 자연과 동물이 어우러져 그 속에서 편암함을 찾을 수 있답니다. 
+                                그야말로 그들만의 숲 속에 사람이 놀러왔다고 봐야 할지도요.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <menu id="menu">
+    </menu>
+    <script>
+        $('#nav').load('nav.html')
+        $('#menu').load('menu.html')
+    </script>
+
+</body>
+
+</html>

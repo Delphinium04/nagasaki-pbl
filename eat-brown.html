@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나가사키 - 먹거리</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
+    <script src="js/right-menu.js"></script>
+    <link rel="stylesheet" href="css/min-reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--nav-->
+        <div id="nav"></div>
+        <style>
+            .picki-img {
+                content: url("img/brown/picki-brown.png");
+                background-size: contain;
+            }
+        </style>
+        <div id="color-line" class="bg-brown">&nbsp;</div>
+        <!--color background-->
+        <div id="content-menu" class="bg-brown">
+            <div id="content-menu--box">
+                <div id="content-menu--group" class="bg-deepbrown">
+                    <p class="color-white">Eat</p>
+                    <div class="bg-white color-disabled "><a href="eat-yellow.html">Yellow</a></div>
+                    <div class="bg-white color-brown font-bold"><a href="eat-Brown.html">Brown</a></div>
+                    <div class="bg-white color-disabled"><a href="eat-White.html">White</a></div>
+                </div>
+            </div>
+            <!--article-->
+            <div id="content-area" class="bg-white">
+                <p id="title" class="font-h1 color-brown">Brown</h1>
+                <div id="article-area">
+                    <div class="article-item">
+                        <div class="article-item--image">
+                            <img src="img/brown/doruko.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>도루코 라이스</p>
+                                <hr class="bg-deepbrown">
+                            </div>
+                            <p class="font-article">
+                                어른들을 위한 어린이 런치 세트라고도 불리는 도루코 라이스는 
+                                필라프, 스파게티, 돈가스에 데미그라스 소스와 카레를 듬뿍 얹어 
+                                먹는 요리입니다. 바삭바삭하게 튀겨진 돈가스를 먹다가 상큼한 
+                                토마토 소스로 맛을 낸 스파게티를 한입, 마일드한 필라프를 한입 
+                                먹다보면 어느새 그릇이 텅 비어 있을지도 모르겠어요.
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/brown/heart-brown.png" alt="하트">
+                                <img src="img/brown/comment-brown.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-brown font-bold">알아두면 좋아요!</p>
+                            <p class="font-tip-article">
+                                도루코 라이스는 가게에 따라서 카레 필라프를 사용하거나 돈카츠 대신 햄버그 스테이크나 치킨카츠, 
+                                새우튀김을 얹는 곳도 있다고 해요. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article-item article-RtoL">
+                        <div class="article-item--image">
+                            <img src="img/brown/sasebo.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>사세보 버거</p>
+                                <hr class="bg-deepbrown">
+                            </div>
+                            <p class="font-article">
+                                단마요네즈 소스를 충분히 곁들이고 손수 만든 빵에 신선한 야채를 주원료로 만들어지고 그 위에 계란후라이가 곁들여지는 것이 특징입니다. 단순한 버거나
+                                패스트푸드가 아닌 수제로, 처음부터 끝까지 만들어지는 사세보의 격식
+                                있는 음식의 하나인 셈이죠.
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/brown/heart-brown.png" alt="하트">
+                                <img src="img/brown/comment-brown.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-brown font-bold">알아두면 좋아요!</p>
+                            <p class="font-tip-article">
+                                사세보 버거는 특별한 레시피가 있는 것은 아니지만 '사세보버거 인증제도'를 통해 역사와 전통, 독창성, 
+                                재료산지 등의 기준을 통과해야만 사세보 버거 자격이 주어진다고 합니다. 그러니 우리 모두 사세보에서 
+                                팔고 있는 모든 버거가 사세보 버거라는 것은 아니라는 것을 유념하도록 해요.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article-item">
+                        <div class="article-item--image">
+                            <img src="img/brown/sippoku.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>싯포쿠 요리</p>
+                                <hr class="bg-deepbrown">
+                            </div>
+                            <p class="font-article">
+                                원탁에 둘러앉아 큰 접시에 담긴 다양한 요리를 나눠 먹는 '싯포쿠 
+                                요리'는 일본, 중국, 서양 요리의 정수만을 뽑아 재창조한, 국제색이 
+                                풍부한 나가사키다운 전통 요리입니다. 현지 식재료도 듬뿍 사용하고 있다고 해요. 다만, 현재는 고급 음식점이나 일류 호텔 레스토랑 등에서 맛볼 수 있다고
+                                해요.
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/brown/heart-brown.png" alt="하트">
+                                <img src="img/brown/comment-brown.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-brown font-bold">알아두면 좋아요!</p>
+                            <p class="font-tip-article">
+                                본래 스타일 그대로의 싯포쿠 요리를 즐기고 싶다면 일본 근대화의 주역 사카모토 료마도 식사했던 카게츠 요정이 유명합니다. 370여년 전통을 자랑하며 기둥에는
+                                료마가 남긴 칼자국이 있을 정도라네요!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="article-item article-RtoL">
+                        <div class="article-item--image">
+                            <img src="img/brown/hatosi.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>하토시</p>
+                                <hr class="bg-deepbrown">
+                            </div>
+                            <p class="font-article">
+                                식빵에 새우를 끼우고 기름에 튀겨 만드는 요리로, 고급 요리 중 
+                                하나였다. 현재는 길거리에서 판매될 정도로 시민들에게 친숙한 
+                                음식으로, 나가사키 신치 차이나타운에서 쉽게 접할 수 있다고 하니 
+                                차이나타운에 들르면 꼭 먹어 봐야겠어요.
+
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/brown/heart-brown.png" alt="하트">
+                                <img src="img/brown/comment-brown.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-brown font-bold">알아두면 좋아요!</p>
+                            <p class="font-tip-article">
+                                차이나타운의 쿄카엔에서 판매하는 하토시는 속이 꽉 차 있어서 더 풍성한 맛을 냅니다. 
+                                테이크 아웃을 하면 더 저렴하게 즐길 수 있다고 해요.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <menu id="menu">
+    </menu>
+    <script>
+        $('#nav').load('nav.html')
+        $('#menu').load('menu.html')
+    </script>
+
+</body>
+
+</html>

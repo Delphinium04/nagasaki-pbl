@@ -83,6 +83,11 @@
   line-height: 100px;
 }
 
+.category-item:last-child {
+  width: 100px;
+  margin-right: 25px;
+}
+
 #introduce-area {
   margin-right: 40px;
 }
@@ -104,11 +109,4 @@
 .category-item:hover .category-sub {
   display: block;
   position: relative;
-}
-
-#menu-open-btn {
-  background: url(../img/menu.png) no-repeat center center;
-  border: none;
-  width: 100px;
-  height: 100px;
 }

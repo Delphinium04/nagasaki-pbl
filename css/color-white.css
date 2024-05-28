@@ -1,0 +1,12 @@
+#content-menu--box {
+  border: 3px solid black;
+  border-top: none;
+}
+
+#color-line {
+  border: 3px solid black;
+}
+
+#content-menu--group > * {
+  border: 2px solid black;
+}

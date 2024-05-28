@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나가사키 - 체험</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
+    <script src="js/right-menu.js"></script>
+    <link rel="stylesheet" href="css/min-reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--nav-->
+        <div id="nav"></div>
+        <style>
+            .picki-img {
+                content: url("img/red/picki-red.png");
+                background-size: contain;
+            }
+        </style>
+        <div id="color-line" class="bg-red">&nbsp;</div>
+        <!--color background-->
+        <div id="content-menu" class="bg-red">
+            <div id="content-menu--box">
+                <div id="content-menu--group" class="bg-deepred">
+                    <p class="color-white">Activity</p>
+                    <div class="bg-white color-red font-bold"><a href="activity-red.html">Red</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-orange.html">Orange</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-green.html">Green</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-blue.html">Blue</a></div>
+                    <div class="bg-white color-disabled"><a href="activity-white.html">White</a></div>
+                </div>
+            </div>
+            <!--article-->
+            <div id="content-area" class="bg-white">
+                <p id="title" class="font-h1 color-red">Red</h1>
+                <div id="article-area">
+                    <div class="article-item">
+                        <div class="article-item--image">
+                            <img src="img/red/omura.png" alt="">
+                        </div>
+                        <div>
+                            <div class="font-h2">
+                                <p>오무라 유메 팜 슈슈</p>
+                                <hr class="bg-deepred">
+                            </div>
+                            <p class="font-article">
+                                가사키에서 재배된 농작물을 직접 판매하는 직판장이 있으며 제철일 경우 미리 예약을 했다면 딸기 따기 체험도 가능해요.
+                                체험장 주변엔 개성 넘치는 레스토랑이 있으며, 식사가 아니더라도 카페나 아이스크림 공방 등에서 여러 맛있는 디저트를 접할 수 있기 때문에 디저트 류를 좋아하면
+                                꼭 가보세요!
+                            </p>
+                            <div class="article-item--toolbar">
+                                <img src="img/red/heart-red.png" alt="하트">
+                                <img src="img/red/comment-red.png" alt="댓글">
+                                <img src="img/share.png" alt="공유">
+                            </div>
+                            <p class="font-tip-title color-red font-bold">알아두면 좋아요</p>
+                            <p class="font-tip-article">
+                                오무라 유메팜 슈슈에서 딸 수 있는 딸기는 나가사키의 유메코나라는 품종이에요. 아주 맛있는 딸기를 재배하기 위해 벌을 이용해 자연적인 수정을 하고 있어 하우스
+                                안에는 하얀 딸기꽃이 가득하다고 합니다. 또 주변 곳곳에
+                                숨어있는 하트도 찾으면서 소소한 즐거움을 느껴봐요~
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <menu id="menu">
+    </menu>
+    <script>
+        $('#nav').load('nav.html')
+        $('#menu').load('menu.html')
+    </script>
+
+</body>
+
+</html>

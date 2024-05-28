@@ -1,20 +1,18 @@
-<!--헤더-->
-<div id="logo-area" onclick="location.href='mainpage.html'">
+<div id="logo-area" style="cursor: pointer;" onclick="location.href='index.html'">
     <img class="picki-img" src="image/home.png" alt="">
     <span class="picki-text" class="color-black">Picki</span>
 </div>
 
 <div style="flex-grow: 1;"></div>
 
-<!--헤더 카테고리-->
 <div id="introduce-area" class="category-item">
     <span>
         Introduce
     </span>
     <div class="category-sub">
-        <a href="sub_introduce.html">소개글</a>
+        <a href="sub-introduce.html">소개글</a>
         <hr>
-        <a href="#none">교통정보</a>
+        <a href="sub-transport.html">교통정보</a>
     </div>
 </div>
 <div class="category-item">
@@ -22,202 +20,26 @@
         City
     </span>
     <div class="category-sub">
-        <a href="sub_introduce.html">북부지역</a>
+        <a href="city-north.html">북부지역</a>
         <hr>
-        <a href="sub_introduce.html">중부지역</a>
+        <a href="city-north.html">중부지역</a>
         <hr>
-        <a href="sub_introduce.html">나가사키시</a>
+        <a href="city-north.html">나가사키시</a>
         <hr>
-        <a href="sub_introduce.html">시마바라반도</a>
+        <a href="city-north.html">시마바라반도</a>
     </div>
 </div>
 <div class="category-item">
-    <span>
+    <a href="store.html" style="text-decoration: none;" class="color-black">
         Store
-    </span>
+    </a>
 </div>
 <div class="category-item">
-    <span>About</span>
+    <a href="about.html" style="text-decoration: none;" class="color-black">
+        About
+    </a>
 </div>
 <div class="category-item">
-    <button id="menu-open-btn">
-    </button>
+    <!-- <button id="menu-open-btn"> -->
+    <i class="fa-solid fa-bars" id="menu-open-btn"></i>
 </div>
-<!--헤더 카테고리-->
-
-<!--우측 메뉴-->
-<!--
-<div>
-    <div id="menu-btn">
-        <a href="#">
-            <img src="image/top right menu.png">
-        </a>
-    </div>
-</div>
-<div class="menu_bg">
-    <div class="menu_menu">
-        <a class="menu_close" href="#">
-            <img src="image/top right menu close.png">
-        </a>
-        <ul class="menu_menu_wrap">
-            <li>
-                <img src="image/top right menu category.png">
-            </li>
-            <li class="menu_menu_border">
-                <a class="menu_eat" href="#">
-                    <img src="image/top right menu eat.png" width="100%">
-                </a>
-                <ul class="menu_eat_menu">
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Yellow
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Brown
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            White
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu_menu_border">
-                <a class="menu_tourism" href="#">
-                    <img src="image/top right menu tourism.png" width="100%">
-                </a>
-                <ul class="menu_tourism_menu">
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Red
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Green
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Blue
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Purple
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Brown
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            White
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu_menu_border">
-                <a class="menu_festival" href="#">
-                    <img src="image/top right menu festival.png" width="100%">
-                </a>
-                <ul class="menu_festival_menu">
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Red
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            White
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Rainbow
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="menu_menu_border">
-                <a class="menu_activity" href="#">
-                    <img src="image/top right menu activity.png" width="100%">
-                </a>
-                <ul class="menu_activity_menu">
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Red
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Orange
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Green
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            Blue
-                        </a>
-                    </li>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <li>
-                        <a class="menu_menu_link" href="#">
-                            White
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</div>
--->
-
-<!--우측 메뉴-->
