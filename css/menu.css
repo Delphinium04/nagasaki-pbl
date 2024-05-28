@@ -1,31 +1,57 @@
 #menu-container {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   width: 300px;
   height: 100%;
   top: 0px;
   right: -300px;
+  z-index: 100;
   background-color: white;
 }
 
+@keyframes slidein {
+  from {
+    right: -300px;
+  }
+
+  to {
+    right: 0px;
+  }
+}
+
+@keyframes slideout {
+  from {
+    right: 0px;
+  }
+
+  to {
+    right: -300px;
+  }
+}
+
 #menu-container.active {
-  right: 0px;
+  animation-duration: 0.5s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#menu-container.deactive {
+  animation-duration: 0.5s;
+  animation-name: slideout;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 #menu-close-btn {
   font-family: witchL;
+  position: relative;
   width: 100px;
   height: 50px;
   border: none;
   font-size: 22px;
   background-color: white;
-}
-
-#menu-container.active #menu-close-btn {
-  position: fixed;
-  top: 10px;
-  right: 10px;
 }
 
 #menu-subtitle {
@@ -41,6 +67,7 @@
   font-family: "witchL";
   font-size: 35px;
   line-height: 80px;
+  cursor: pointer;
 }
 
 .menu-submenu > span::after {
@@ -70,4 +97,48 @@
 
 .menu-submenu-content.active {
   display: block;
+}
+
+#menu-bg {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: black;
+  filter: opacity(0);
+  pointer-events: none;
+}
+
+#menu-bg.active {
+  animation-name: fadein;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+#menu-bg.deactive {
+  animation-name: fadeout;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadein {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(0.5);
+  }
+}
+@keyframes fadeout {
+  from {
+    filter: opacity(0.5);
+  }
+  to {
+    filter: opacity(0);
+  }
 }

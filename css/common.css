@@ -75,6 +75,14 @@
   src: url("../font/witchforestL.ttf");
 }
 
+@font-face {
+  font-family: "KCC-eunyoung";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KCC-eunyoung-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 a,
 a:visited,
 a:active,
@@ -178,7 +186,7 @@ a:hover {
 .font-tip-title {
   font-family: Cafe24SsurroundAir;
   font-size: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .font-tip-article {
