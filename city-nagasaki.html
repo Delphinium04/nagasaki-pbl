@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나가사키 - 나가사키시</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
+    <script src="js/right-menu.js"></script>
+    <link rel="stylesheet" href="css/min-reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/color-white.css">
+    <style>
+        #title {
+            font-size: 60px;
+            font-family: witchL;
+            margin: 20px 0px;
+        }
+
+        #content-area {
+            text-align: center;
+        }
+
+        #content-area img {
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--nav-->
+        <div id="nav"></div>
+        <style>
+            .picki-img {
+                content: url("img/white/picki-white.png");
+                background-size: contain;
+            }
+        </style>
+        <div id="color-line" class="bg-white">&nbsp;</div>
+        <!--color background-->
+        <div id="content-menu" class="bg-white">
+            <div id="content-menu--box">
+                <div id="content-menu--group" class="bg-black">
+                    <p class="color-white">City</p>
+                    <div class="bg-white color-disabled"><a href="city-north.html">북부 지역</a></div>
+                    <div class="bg-white color-disabled"><a href="city-middle.html">중부지역</a></div>
+                    <div class="bg-white color-black"><a href="city-nagasaki.html">나가사키시</a></div>
+                    <div class="bg-white color-disabled"><a href="city-simabara.html">시마바라 반도</a></div>
+                </div>
+            </div>
+            <!--article-->
+            <div id="content-area" class="bg-white">
+                <p id="title" class="font-h1 color-black">나가사키시</h1>
+                <div id="article-area">
+                    <img src="img/nagasaki.jpg" alt="나가사키현 북부">
+                    <p class="font-h2">지도 표기</p>
+                    <img src="img/nagasaki-map.png" alt="나가사키현 북부">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <menu id="menu">
+    </menu>
+    <script>
+        $('#nav').load('nav.html')
+        $('#menu').load('menu.html')
+    </script>
+
+</body>
+
+</html>

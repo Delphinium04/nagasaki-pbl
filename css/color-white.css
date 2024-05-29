@@ -8,5 +8,6 @@
 }
 
 #content-menu--group > * {
+  font-family: "Vesper Libre";
   border: 2px solid black;
 }

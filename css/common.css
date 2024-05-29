@@ -3,12 +3,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap");
 /* Noto Sans KR */
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+KR:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;900&display=swap");
+.vesper-libre-regular {
+  font-family: "Vesper Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+.vesper-libre-black- {
+  font-family: "Vesper Libre", serif;
+  font-weight: 900;
+  font-style: normal;
+}
 /* tvn 즐거운이야기 */
 @font-face {
   font-family: "OTEnjoystoriesBA";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
     format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* tvn 즐거운이야기 */
+@font-face {
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,11 +50,8 @@
 }
 
 @font-face {
-  font-family: "Cafe24SsurroundAir";
-  src: url("https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff")
-    format("woff");
-  font-weight: normal;
-  font-style: normal;
+  font-family: "thehongchawangja";
+  src: url("../font/thehongchawangja.ttf");
 }
 
 @font-face {
@@ -243,7 +260,7 @@ a:hover {
 }
 
 .font-outline {
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
 }
 
@@ -297,39 +314,6 @@ body {
   flex-direction: column;
 }
 
-/* nav */
-.nav--group {
-  width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#logo-icon {
-  width: 75px;
-  height: 75px;
-}
-
-#logo-title {
-  line-height: 80px;
-  font-weight: bold;
-  font-size: 45px;
-}
-
-#menu-icon {
-  margin: 0px 20px;
-  height: 25px;
-  width: 25px;
-}
-
-.nav--group > a {
-  margin: 0px 25px;
-  font-size: 29px;
-  text-decoration: none;
-  color: inherit;
-}
-
 /*#region color background start */
 
 #color-line {
@@ -358,13 +342,14 @@ body {
   margin-bottom: 200px;
   width: 100%;
   padding: 10px 0px;
+  padding-bottom: 5px;
   text-align: center;
   font-size: 20px;
 }
 
 #content-menu--group * {
   font-family: GabiaMaeumgyeol;
-  margin: 2px 4px;
+  margin: 2px auto;
   height: 60px;
   align-items: center;
   line-height: 60px;
@@ -383,6 +368,7 @@ body {
 
 /*#region content start */
 #content-area {
+  background-color: white;
   overflow: scroll;
   overflow-y: scroll;
   height: calc(100% - 100px);
@@ -395,6 +381,8 @@ body {
 }
 
 #title {
+  font-family: "Vesper Libre";
+  font-weight: bold;
   padding: 20px 20px;
 }
 
