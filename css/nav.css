@@ -45,6 +45,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10000;
 }
 
 #logo-icon {
@@ -55,7 +56,7 @@
 #logo-title {
   line-height: 80px;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 45pt;
 }
 
 #menu-icon {
@@ -66,7 +67,7 @@
 
 .nav--group > a {
   margin: 0px 25px;
-  font-size: 29px;
+  font-size: 29pt;
   text-decoration: none;
   color: inherit;
 }

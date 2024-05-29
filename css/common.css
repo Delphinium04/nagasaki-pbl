@@ -266,36 +266,36 @@ a:hover {
 
 .font-h1 {
   font-family: witchL;
-  font-size: 80px;
+  font-size: 80pt;
   text-align: center;
   font-weight: bold;
 }
 
 .font-h2 {
   font-family: Cafe24Dangdanghae;
-  font-size: 38px;
+  font-size: 38pt;
   font-weight: bold;
 }
 
 .font-h3 {
   font-family: Cafe24Simplehae;
-  font-size: 42px;
+  font-size: 42pt;
 }
 .font-article {
   font-family: Cafe24Simplehae;
-  font-size: 28px;
+  font-size: 28pt;
   line-height: 1.5em;
 }
 
 .font-tip-title {
   font-family: Cafe24SsurroundAir;
-  font-size: 25px;
+  font-size: 25pt;
   margin-bottom: 15px;
 }
 
 .font-tip-article {
   font-family: Cafe24Oneprettynight;
-  font-size: 18px;
+  font-size: 18pt;
 }
 
 /*#endregion */
@@ -344,7 +344,7 @@ body {
   padding: 10px 0px;
   padding-bottom: 5px;
   text-align: center;
-  font-size: 20px;
+  font-size: 20pt;
 }
 
 #content-menu--group * {
@@ -357,7 +357,7 @@ body {
 
 #content-menu--group > p {
   font-family: ghanachoco;
-  font-size: 32px;
+  font-size: 32pt;
 }
 
 #content-menu--group a {
@@ -454,7 +454,7 @@ body {
   left: 50px;
   bottom: 60px;
   height: 30px;
-  font-size: 20px;
+  font-size: 20pt;
   line-height: 30px;
   vertical-align: middle;
   text-align: center;

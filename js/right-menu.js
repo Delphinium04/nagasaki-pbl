@@ -8,14 +8,16 @@ $(document).ready(function () {
         $($menu_container).addClass('active');
         $($menu_container).removeClass('deactive');
         $($menu_bg).addClass('active');
-        $($menu_bg).removeClass('deactive')
+        $($menu_bg).removeClass('deactive');
+        console.log('menu opened');
     })
 
     $('#menu-close-btn').on('click', function () {
         $($menu_container).addClass('deactive');
         $($menu_container).removeClass('active');
         $($menu_bg).addClass('deactive');
-        $($menu_bg).removeClass('active')
+        $($menu_bg).removeClass('active');
+        console.log('menu closed');
     })
 
     $(".menu-submenu").click(function () {

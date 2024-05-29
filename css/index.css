@@ -1,0 +1,91 @@
+#nav {
+  position: fixed;
+  height: 100px;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.picki-text {
+  color: white;
+}
+
+.category-item > * {
+  color: white;
+}
+
+.category-sub {
+  display: none;
+}
+
+.container {
+  display: unset;
+}
+
+#slide-area {
+  position: relative;
+  height: fit-content;
+  width: max-content;
+  top: 0px;
+}
+
+#slide-image-ul {
+  position: relative;
+}
+
+#slide-image-ul li {
+  float: left;
+}
+
+#slide-image-ul img {
+  width: 100vw;
+  height: 50vh;
+  object-fit: none;
+}
+
+/*슬라이드*/
+
+/*슬라이드 문구*/
+#slide-phrase {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+#slide-phrase--1 {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "OTEnjoystoriesBA";
+  font-size: 65pt;
+  color: white;
+}
+
+#slide-phrase--2 {
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 20px;
+  text-align: center;
+  font-family: "Cafe24Simplehae";
+  font-size: 25pt;
+}
+
+#content {
+  height: max-content;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  vertical-align: middle;
+}
+
+#main-onepick {
+  font-size: 25pt;
+}
+
+.palette {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
