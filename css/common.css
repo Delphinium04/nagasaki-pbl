@@ -261,7 +261,7 @@ a:hover {
 }
 
 .font-h3 {
-  font-family: Cafe24Dangdanghae;
+  font-family: Cafe24Simplehae;
   font-size: 42px;
 }
 .font-article {
@@ -383,14 +383,13 @@ body {
 
 /*#region content start */
 #content-area {
+  overflow: scroll;
+  overflow-y: scroll;
+  height: calc(100% - 100px);
   width: 100%;
   flex-grow: 1;
 }
 
-#article-area {
-  display: inline-flex;
-  margin-bottom: 20px;
-}
 #article-area > * {
   padding: 10px 30px;
 }
@@ -436,15 +435,8 @@ body {
   display: inline-block;
 }
 
-#content-area {
-  overflow: scroll;
-  overflow-y: scroll;
-  height: calc(100% - 100px);
-}
-
 .article-item {
   display: flex;
-  flex-direction: row;
   height: fit-content;
   margin: 20px 0px;
 }
@@ -498,5 +490,13 @@ body {
 
 .article-RtoL hr {
   margin-left: auto;
+}
+
+.article-item--subtitle {
+  margin-bottom: 40px;
+}
+
+.article-item--subtitle > hr {
+  margin: 20px 0px;
 }
 /* https://stackoverflow.com/a/62745061 */

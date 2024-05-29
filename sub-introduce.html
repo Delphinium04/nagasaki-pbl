@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>나가사키 - 소개글</title>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
     <script src="js/right-menu.js"></script>
@@ -12,21 +12,51 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/menu.css">
+    <style>
+        .font-h3 {
+            font-size: 22px;
+        }
+
+        .font-article {
+            font-size: 20px;
+        }
+
+        #article-area {
+            display: flex;
+        }
+
+        #subtitle-div {
+            width: 100%;
+        }
+
+        #article-script {
+            flex-grow: 3;
+        }
+
+        #article-imgs {
+            flex-grow: 2;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <!--nav-->
         <div id="nav"></div>
+        <style>
+            .picki-img {
+                content: url("img/picki-logo.png");
+                background-size: contain;
+            }
+        </style>
         <div id="color-line" class="bg-black">&nbsp;</div>
         <!--color background-->
         <div id="content-menu" class="bg-black">
-
             <div id="content-menu--box">
                 <div id="content-menu--group" class="bg-gray">
                     <p class="color-white">Introduce</p>
-                    <div class="bg-white color-black font-bold">소개글</div>
-                    <div class="bg-white color-disabled">교통 정보</div>
+                    <div class="bg-white color-black font-bold"><a href="sub-introduce.html">소개글</a></div>
+                    <div class="bg-white color-disabled"><a href="sub-transport.html">교통 정보</a></div>
                 </div>
             </div>
             <!--article-->
@@ -44,7 +74,7 @@
                                 <span class="font-h3">다양한 개성이 공존하는 곳, 나가사키</span>
                             </div>
                         </div>
-                        <p class="font-article">
+                        <p id="article-script" class="font-article">
                             나가사키는 산들을 타고 뻗어 나간 도시의 아름다운 정취를 자랑하며 교역 중심지로서 경제적 번영을 구가한 지역이지만, 동시에 원자 폭탄의 타격으로 엄청난 피해를
                             감당해야 했던
                             비극적 역사를 간직한 곳이기도 합니다. 더불어 문화적으로 개방된 분위기가 우세한 이 항구 도시는 관광객이 반드시 가봐야 할 장소이며 일본에서 최고 관광지 중
