@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<!--
+        1. 슬라이드 이미지 크기
+        2. phrase 컬러 애니메이션
+    -->
 
 <head>
     <meta charset="UTF-8">
@@ -8,42 +12,12 @@
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
     <script src="js/right-menu.js"></script>
+    <script src="js/slide.js"></script>
     <link rel="stylesheet" href="css/min-reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/index.css">
-    <script>
-        /*슬라이드*/
-        $(document).ready(function () {
-            $slide_images_parent = '#slide-image-ul'
-            $slide_phrase = '#slide-phrase--2'
-            vw = $(window).width();
-
-            let num = 0;
-            bg_colors = ['red', 'yellow', 'green', 'blue', 'purple',]
-            colors = ['white', 'black', 'white', 'white', 'white']
-
-            $($slide_images_parent + ' li').last().prependTo($slide_images_parent);
-            $($slide_images_parent).css('left', -vw);
-            $($slide_phrase).addClass('bg-' + bg_colors[num]);
-            $($slide_phrase).addClass('color-' + colors[num]);
-
-            setInterval(function () {
-                vw = $(window).width();
-                $($slide_images_parent).animate({ left: '-=' + vw }, 'slow', function () {
-                    $($slide_images_parent + ' li').first().appendTo($slide_images_parent);
-                    $($slide_images_parent).css('left', -vw);
-
-                    if (num > 4) num = 0;
-                    $($slide_phrase).removeClass();
-                    $($slide_phrase).addClass('bg-' + bg_colors[num]);
-                    $($slide_phrase).addClass('color-' + colors[num]);
-                    num++;
-                });
-            }, 5000);
-        });
-    </script>
 </head>
 
 <body>
@@ -53,19 +27,19 @@
         <div id="slide-area">
             <ul id="slide-image-ul">
                 <li>
-                    <img src="image/mainpage slide 1.jpg" alt="">
+                    <img src="image/slide-1.jpg" alt="">
                 </li>
                 <li>
-                    <img src="image/mainpage slide 2.jpg" alt="">
+                    <img src="image/slide-2.jpg" alt="">
                 </li>
                 <li>
-                    <img src="image/mainpage slide 3.jpg" alt="">
+                    <img src="image/slide-3.jpg" alt="">
                 </li>
                 <li>
-                    <img src="image/mainpage slide 4.jpg" alt="">
+                    <img src="image/slide-4.jpg" alt="">
                 </li>
                 <li>
-                    <img src="image/mainpage slide 5.jpg" alt="">
+                    <img src="image/slide-5.jpg" alt="">
                 </li>
             </ul>
         </div>
@@ -86,9 +60,9 @@
         <p id="main-onepick">
             원픽 컬러 클릭!
         </p>
-        <div id="content">
-            <img class="eat" src="image/eat.jpg" alt="">
-            <div class="palette">
+        <div id="category">
+            <div class="category--image"> <img src="image/eat.jpg" alt=""></div>
+            <div class="category--palette">
                 <a href="eat-yellow.html">
                     <img src="image/eat yellow.png" alt="">
                 </a>
@@ -99,8 +73,8 @@
                     <img src="image/eat white.png" alt="">
                 </a>
             </div>
-            <img class="tourism" src="image/tourism.jpg" alt="">
-            <div class="palette">
+            <div class="category--image"> <img src="image/tourism.jpg" alt=""></div>
+            <div class="category--palette">
 
                 <a href="tourism-red.html">
                     <img src="image/tourism red.png" alt="">
@@ -132,8 +106,8 @@
                 </a>
 
             </div>
-            <img class="festival" src="image/festival.jpg" alt="">
-            <div class="palette">
+            <div class="category--image"> <img src="image/festival.jpg" alt=""></div>
+            <div class="category--palette">
 
                 <a href="festival-red.html">
                     <img src="image/festival red.png" alt="">
@@ -150,8 +124,8 @@
                 </a>
 
             </div>
-            <img class="activity" src="image/activity.jpg" alt="">
-            <div class="palette">
+            <div class="category--image"> <img src="image/activity.jpg" alt=""></div>
+            <div class="category--palette">
 
                 <a href="activity-red.html">
                     <img src="image/activity red.png" alt="">
