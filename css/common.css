@@ -4,6 +4,14 @@
 /* Noto Sans KR */
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+KR:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@400;900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+.noto-sans-kr-bold {
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
 .vesper-libre-regular {
   font-family: "Vesper Libre", serif;
   font-weight: 400;
