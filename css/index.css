@@ -2,7 +2,7 @@
   position: fixed;
   height: 100px;
   background-color: transparent;
-  z-index: 1;
+  z-index: 4;
 }
 
 .picki-text {
@@ -16,11 +16,7 @@
 .category-sub {
   display: none;
 }
-
-.container {
-  display: unset;
-}
-
+/*#region Slide */
 #slide-area {
   position: relative;
   height: fit-content;
@@ -33,6 +29,7 @@
 }
 
 #slide-image-ul li {
+  position: relative;
   float: left;
 }
 
@@ -42,12 +39,9 @@
   object-fit: none;
 }
 
-/*슬라이드*/
-
-/*슬라이드 문구*/
 #slide-phrase {
   position: absolute;
-  top: 150px;
+  top: 20vh;
   left: 0;
   right: 0;
   z-index: 2;
@@ -71,21 +65,34 @@
   font-family: "Cafe24Simplehae";
   font-size: 25pt;
 }
+/*#endregion */
 
-#content {
-  height: max-content;
+#category {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   vertical-align: middle;
+  flex-grow: 1;
 }
 
 #main-onepick {
   font-size: 25pt;
 }
 
-.palette {
+.category--palette {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
+  margin: 0px 30px;
+}
+
+@media only screen and (min-height: 1090px) {
+  #nav {
+    background-color: white;
+  }
+  #nav * {
+    color: black;
+  }
 }
