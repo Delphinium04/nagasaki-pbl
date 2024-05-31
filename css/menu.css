@@ -35,14 +35,14 @@
 }
 
 #menu-container.active {
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-name: slidein;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 #menu-container.deactive {
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-name: slideout;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -122,14 +122,14 @@
 
 #menu-bg.active {
   animation-name: fadein;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
 
 #menu-bg.deactive {
   animation-name: fadeout;
-  animation-duration: 0.5s;
+  animation-duration: 0.2s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }

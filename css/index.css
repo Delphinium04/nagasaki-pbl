@@ -102,6 +102,9 @@ body {
   margin: 0px 30px;
 }
 
+#menu-open-btn {
+  content: url("../img/menu-white.png");
+}
 @media only screen and (min-height: 1090px) {
   #nav {
     background-color: white;
@@ -111,5 +114,8 @@ body {
   }
   .picki-img {
     content: url("../image/home\ black.png");
+  }
+  #menu-open-btn {
+    content: url("../img/menu.png");
   }
 }

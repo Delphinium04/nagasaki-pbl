@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나가사키 - 투어</title>
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="https://kit.fontawesome.com/0d8563f426.js" crossorigin="anonymous"></script>
     <script src="js/right-menu.js"></script>
     <link rel="stylesheet" href="css/min-reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/menu.css">
+    <style>
+        .picki-img {
+            content: url("img/blue/picki-blue.png");
+            background-size: contain;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <!--nav-->
         <div id="nav"></div>
-        <style>
-            .picki-img {
-                content: url("img/blue/picki-blue.png");
-                background-size: contain;
-            }
-        </style>
+
         <div id="color-line" class="bg-blue">&nbsp;</div>
         <!--color background-->
         <div id="content-menu" class="bg-blue">
@@ -136,11 +136,6 @@
     </div>
     <menu id="menu">
     </menu>
-    <script>
-        $('#nav').load('nav.html')
-        $('#menu').load('menu.html')
-    </script>
-
 </body>
 
 </html>

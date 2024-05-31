@@ -17,6 +17,11 @@
         #content-area {
             height: 100%;
         }
+
+        .picki-img {
+            content: url("img/red/picki-red.png");
+            background-size: contain;
+        }
     </style>
 </head>
 
@@ -24,12 +29,6 @@
     <div class="container">
         <!--nav-->
         <div id="nav"></div>
-        <style>
-            .picki-img {
-                content: url("img/red/picki-red.png");
-                background-size: contain;
-            }
-        </style>
         <div id="color-line" class="bg-red">&nbsp;</div>
         <!--color background-->
         <div id="content-menu" class="bg-red">
@@ -85,11 +84,6 @@
     </div>
     <menu id="menu">
     </menu>
-    <script>
-        $('#nav').load('nav.html')
-        $('#menu').load('menu.html')
-    </script>
-
 </body>
 
 </html>
