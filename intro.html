@@ -1,172 +1,175 @@
 ﻿<!DOCTYPE html>
-
-<!--인트로페이지-->
-<!--제작자: 202111112 박세현-->
-<!--최종 수정: 2024.05.29-->
-
 <html>
 
-    <head>
+<head>
+    <style>
+        /*상상토끼 신과장*/
+        @font-face {
+            font-family: 'SangSangShin';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
 
-        <style>/*상상토끼 신과장*/
-            @font-face {
-                font-family: 'SangSangShin';
-                src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangShin.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
-        </style>
+    <style>
+        /*상상토끼 꽃길*/
+        @font-face {
+            font-family: 'SangSangFlowerRoad';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangFlowerRoad.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
 
-        <style>/*상상토끼 꽃길*/
-            @font-face {
-                font-family: 'SangSangFlowerRoad';
-                src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangFlowerRoad.woff') format('woff');
-                font-weight: normal;
-                font-style: normal;
-            }
-        </style>
+        /*음소거, 비음소거 버튼 하이퍼 링크 밑줄 제거*/
+        .mutebtn a:link {
+            text-decoration: none;
+        }
 
-        <style>/*음소거, 비음소거 버튼 하이퍼 링크 밑줄 제거*/
-            .mutebtn a:link{
-                text-decoration: none;
-            }
-            .mutebtn a:visited{
-                text-decoration: none;
-            }
-            .mutebtn a:hover{
-                text-decoration: none;
-            }
-        </style>
+        .mutebtn a:visited {
+            text-decoration: none;
+        }
 
-        <style>/*비디오 크기, 위치 조정*/
-            .introvideo{
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        </style>
+        .mutebtn a:hover {
+            text-decoration: none;
+        }
 
-        <style>/*음소거해제 위치*/
-            .unmuted_btn{
-                position: absolute;
-                top: 50px;
-                right: 50px;
-            }
-        </style>
+        /*비디오 크기, 위치 조정*/
+        .introvideo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-        <style>/*음소거 위치*/
-            .muted_btn{
-                display: none;
-                position: absolute;
-                top: 50px;
-                right: 50px;
-            }
-        </style>
+        /*음소거해제 위치*/
+        .unmuted_btn {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
 
-        <style>/*가운데 사진 위치*/
-            .picture{
-                position: absolute;
-                z-index: 1;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        </style>
+        /*음소거 위치*/
+        .muted_btn {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
 
-        <style>/*가운데 문구 위치*/
-            .intro_phrase{
-                position: absolute;
-                z-index: 2;
-                left: 50%;
-                top: 40%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                font-family: 'SangSangShin';
-                font-size: 60pt;
-                color: white;
-            }
-        </style>
+        /*가운데 사진 위치*/
+        .picture {
+            display: block;
+            width: 80vw;
+            height: 80vh;
+            position: absolute;
+            z-index: 1;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-        <style>/*나가사키 문구*/
-            .nagasaki{
-                font-family: 'SangSangFlowerRoad';
-                font-size: 70pt;
-            }
-        </style>
-        
-        <style>/*가운데 문구 하이퍼 링크 밑줄 제거*/
-            .intro_phrase a:link{
-                color: white;
-                text-decoration: none;
-            }
-            .intro_phrase a:visited{
-                color: white;
-                text-decoration: none;
-            }
-            .intro_phrase a:hover{
-                color: white;
-                text-decoration: none;
-            }
-        </style>
+        .picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        /*가운데 문구 위치*/
+        .intro_phrase {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: 'SangSangShin';
+            font-size: 66pt;
+            color: white;
+        }
 
-        <script>/*음소거, 음소거해제 기능*/
-            $(document).ready(function(){
-                $('.unmuted_btn').on('click', function(){
-                    $('.unmuted_btn').hide();
-                    $('.muted_btn').show();
-                    $('.introvideo').prop('muted', false);
-                });
+        .intro_phrase a {
+            text-wrap: nowrap;
+        }
+
+        /*나가사키 문구*/
+        .nagasaki {
+            font-family: 'SangSangFlowerRoad';
+            font-size: 70pt;
+        }
+
+        /*가운데 문구 하이퍼 링크 밑줄 제거*/
+        .intro_phrase a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .intro_phrase a:visited {
+            color: white;
+            text-decoration: none;
+        }
+
+        .intro_phrase a:hover {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script>/*음소거, 음소거해제 기능*/
+        $(document).ready(function () {
+            $('.unmuted_btn').on('click', function () {
+                $('.unmuted_btn').hide();
+                $('.muted_btn').show();
+                $('.introvideo').prop('muted', false);
             });
-            $(document).ready(function(){
-                $('.muted_btn').on('click', function(){
-                    $('.muted_btn').hide();
-                    $('.unmuted_btn').show();
-                    $('.introvideo').prop('muted', true);
-                });
+        });
+        $(document).ready(function () {
+            $('.muted_btn').on('click', function () {
+                $('.muted_btn').hide();
+                $('.unmuted_btn').show();
+                $('.introvideo').prop('muted', true);
             });
-        </script>
+        });
+    </script>
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <div class="introvideo_layout">
+    <div class="introvideo_layout">
 
-            <video class="introvideo" src="video/intropage video.mp4" autoplay muted loop>
-                Your browser is not supported!
-            </video>
+        <video class="introvideo" src="video/intropage video.mp4" autoplay muted loop>
+            Your browser is not supported!
+        </video>
 
-            <div class="mutebtn">
-                <a class="muted_btn" href="#">
-                    <img src="image/sound off.png" width="80px" height="80px">
-                </a>
-                <a class="unmuted_btn" href="#">
-                    <img src="image/sound on.png" width="80px" height="80px">
-                </a>
-            </div>
-
-            <div class="picture">
-                <a class="intropage_picture" href="mainpage.html">
-                    <img src="image/intropage picture.jpg" width="1300px" height="860px">
-                </a>
-                <p class="intro_phrase">
-                    <a href="mainpage.html">
-                        컬러풀한 순간을 담아<br>
-                        마음속에 깊이 새기다, 
-                        <span class="nagasaki">
-                            나가사키
-                        </span>
-                    </a>
-                </p>
-            </div>
-
+        <div class="mutebtn">
+            <a class="muted_btn" href="#">
+                <img src="image/sound off.png" width="80px" height="80px">
+            </a>
+            <a class="unmuted_btn" href="#">
+                <img src="image/sound on.png" width="80px" height="80px">
+            </a>
         </div>
 
-    </body>
+        <div class="picture">
+            <a href="index.html">
+                <img src="image/intropage picture.jpg">
+            </a>
+            <p class="intro_phrase">
+                <a href="mainpage.html">
+                    컬러풀한 순간을 담아<br>
+                    마음속에 깊이 새기다,
+                    <span class="nagasaki">
+                        나가사키
+                    </span>
+                </a>
+            </p>
+        </div>
+    </div>
+</body>
 
 </html>

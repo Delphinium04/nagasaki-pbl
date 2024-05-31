@@ -69,6 +69,7 @@ body {
   text-align: center;
   font-family: "Cafe24Simplehae";
   font-size: 25pt;
+  color: white;
 }
 /*#endregion */
 
@@ -107,5 +108,8 @@ body {
   }
   #nav * {
     color: black;
+  }
+  .picki-img {
+    content: url("../image/home\ black.png");
   }
 }

@@ -1,5 +1,6 @@
 
 $menu_open_btn = "#menu-open-btn";
+$menu_close_btn = "#menu-close-btn";
 $menu_container = "#menu-container";
 $menu_bg = "#menu-bg";
 
@@ -12,7 +13,7 @@ $(document).ready(function () {
         console.log('menu opened');
     })
 
-    $('#menu-close-btn').on('click', function () {
+    $($menu_close_btn).on('click', function () {
         $($menu_container).addClass('deactive');
         $($menu_container).removeClass('active');
         $($menu_bg).addClass('deactive');
