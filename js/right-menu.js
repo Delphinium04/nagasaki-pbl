@@ -4,6 +4,10 @@ $menu_container = "#menu-container";
 $menu_bg = "#menu-bg";
 
 $(document).ready(function () {
+    /* 언더라인 색 작업 */
+    main_color = $('#title').css('color');
+    $(".font-h2").css({ 'text-decoration-color': main_color });
+
     $('#nav').load('nav.html');
     $('#menu').load('menu.html', function () {
         $($menu_open_btn).on('click', function () {

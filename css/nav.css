@@ -61,7 +61,6 @@
 
 .nav--group > a {
   margin: 0px 25px;
-  font-size: 29pt;
   text-decoration: none;
   color: inherit;
 }
@@ -101,7 +100,7 @@
   width: 200px;
   height: 100%;
   font-family: "GabiaMaeumgyeol";
-  font-size: 32pt;
+  font-size: 26pt;
 
   background-color: transparent;
   border: none;
@@ -133,7 +132,7 @@
   border: 1px solid black;
   padding: 20px 20px;
   font-family: "TTHakgyoansimYeohaengR";
-  font-size: 20pt;
+  font-size: 18pt;
   line-height: 28px;
   z-index: 1;
 }

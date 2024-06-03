@@ -274,36 +274,37 @@ a:hover {
 
 .font-h1 {
   font-family: witchL;
-  font-size: 80pt;
+  font-size: 60pt;
   text-align: center;
   font-weight: bold;
 }
-
 .font-h2 {
+  text-decoration: underline;
+  text-underline-offset: 15px;
   font-family: Cafe24Dangdanghae;
-  font-size: 38pt;
+  font-size: 36pt;
   font-weight: bold;
 }
 
 .font-h3 {
   font-family: Cafe24Simplehae;
-  font-size: 42pt;
+  font-size: 28pt;
 }
 .font-article {
   font-family: Cafe24Simplehae;
-  font-size: 28pt;
+  font-size: 18pt;
   line-height: 1.5em;
 }
 
 .font-tip-title {
   font-family: Cafe24SsurroundAir;
-  font-size: 25pt;
+  font-size: 22pt;
   margin-bottom: 15px;
 }
 
 .font-tip-article {
   font-family: Cafe24Oneprettynight;
-  font-size: 18pt;
+  font-size: 14pt;
 }
 
 /*#endregion */
@@ -341,7 +342,7 @@ body {
 #content-menu--box {
   align-items: center;
   display: flex;
-  width: 300px;
+  width: 250px;
   height: 100%;
   flex-grow: 0;
 }
@@ -365,7 +366,7 @@ body {
 
 #content-menu--group > p {
   font-family: ghanachoco;
-  font-size: 32pt;
+  font-size: 24pt;
 }
 
 #content-menu--group a {
@@ -442,9 +443,11 @@ body {
 }
 
 .article-item hr {
-  width: 225px;
-  height: 2px;
-  margin-bottom: 25px;
+  margin: 10px 0px;
+  width: 0px;
+  height: 0px;
+  color: white;
+  border-color: white;
 }
 
 .article-item--image {
@@ -494,5 +497,9 @@ body {
 
 .article-item--subtitle > hr {
   margin: 20px 0px;
+  width: 0px;
+  height: 0px;
+  color: white;
+  border-color: white;
 }
 /* https://stackoverflow.com/a/62745061 */
