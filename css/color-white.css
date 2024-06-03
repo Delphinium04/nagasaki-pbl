@@ -12,6 +12,14 @@
   border: 2px solid black;
 }
 
+.font-tip-title {
+  color: black !important;
+}
+
 .font-tip-article {
   color: black;
+}
+
+.font-h2 {
+  text-decoration-color: black !important;
 }
