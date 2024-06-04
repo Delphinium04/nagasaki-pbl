@@ -23,6 +23,13 @@
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /* tvn 즐거운이야기 */
 @font-face {
   font-family: "OTEnjoystoriesBA";
@@ -297,9 +304,9 @@ a:hover {
 }
 
 .font-tip-title {
-  font-family: Cafe24SsurroundAir;
+  font-family: Cafe24Ssurround;
   font-size: 22pt;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .font-tip-article {
@@ -425,6 +432,7 @@ body {
 
 #article-imgs img {
   padding: 20px 10px;
+  min-width: 200px;
 }
 /*#endregion */
 
