@@ -1,5 +1,5 @@
 body {
-  background: url("../image/mainpage background.jpg");
+  background: url("../image/mainpage background.webp");
   background-size: cover;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 #menu-open-btn {
-  content: url("../img/menu-white.png");
+  content: url("../img/menu-white.webp");
 }
 @media only screen and (min-height: 1090px) {
   #nav {
@@ -113,9 +113,9 @@ body {
     color: black;
   }
   .picki-img {
-    content: url("../image/home\ black.png");
+    content: url("../image/home\ black.webp");
   }
   #menu-open-btn {
-    content: url("../img/menu.png");
+    content: url("../img/menu.webp");
   }
 }
